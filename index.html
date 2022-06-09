@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SW: SPACE BATTLE</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Joan&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id='modalEl' style='display: none; '>
+    <div class='Wrapper1'>
+      <h1 id='gameNameEl'>SW: Star Battle</h1>
+      <br><br>
+      <div class="mb-3">
+        <label for="playerId" class="form-label">Enter your name: </label>
+        <input type="text" class="form-control" id="playerId">
+        <span id='IErrorSpan'></span>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class='button' id='startGameBtn'>Start Game</button>
+        <button type="button" class='button' id='recordTableBtn'>Records</button>
+
+      </div>
+
+      <div class="form-check form-switch">
+        <label class="TBtxt">SOUND: ON/OFF</label>
+        <input type="checkbox" id="gameMusicSwitch" class="toggle-button">
+      </div>
+    </div>
+  </div>
+
+  <div id='modalGameEl'>
+    <div class='Wrapper2'>
+      <h1 id='bigScoreEl'>0</h1>
+      <p id='bigScoreText'>Points</p>
+
+      <div class="btn-group">
+        <button type="button" class='button' id='nextGameBtn'>New Game</button>
+        <button type="button" class='button' id='returnBtn'>Main Page</button>
+      </div>
+    </div>
+  </div>
+
+  <div id='modalRecordEl' style='display: none;'>
+    <div class='Wrapper3'>
+      <h1>Top 10 Players</h1>
+      <button id='modalRecordCloseBtn' aria-label="Close" type="button"><i class="icon-cross"></i></button>
+    </div>
+  </div>
+
+  <div id="parentDiv">
+    <p id='scoresContainer' style='display: none;'>
+      <span>Score:</span> <span id="scoreEl">0</span>
+    </p>
+    <div class='buttonsPhone' style='display: none;'>
+      <button type="button" class='btn-left'></button>
+      <button type="button" class='btn-right'></button>
+      <button type="button" class='btn-shot'></button>
+    </div>
+    <canvas></canvas>
+  </div>
+
+  <script src='js/swBattleXWing.js'></script>
+  <script src="js/swBattleTFighter.js"></script>
+  <script src='js/swBattleTFsqGrid.js'></script>
+  <script src="js/XwingBlasterShot.js"></script>
+  <script src='js/swBattleStarParticles.js'></script>
+  <script src="js/TfighterBlasterShot.js"></script>
+  <script src="js/swBattleGameModel.js"></script>
+  <script src='js/swBattleGameView.js'></script>
+  <script src="js/swBattleGameController.js"></script>
+  
+  <script src='js/swBgameInit.js'></script>
+</body>
+
+</html>
